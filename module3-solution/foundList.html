@@ -1,0 +1,12 @@
+
+<div style = "margin-top: 100px;">
+    <ul class="list-group" ng-repeat="item in menu.foundItems">
+            <li class="list-group-item">
+                <h3>{{item.name}}</h3>
+                <h4>{{item.short_name}}</h4>
+                <p>{{item.description}}</p>
+                <input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-primary" value="Don't want this one!">
+            </li>
+    </ul>
+</div>
+<div class="alert alert-danger" style = "margin-top: 100px;" role="alert" ng-show="menu.emptyMessage">{{menu.emptyMessage}}</div>
