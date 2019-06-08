@@ -1,44 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="MenuApp">
-  <head>
-    <title>Narrow Down Your Menu Choice</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Menu App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-      <div class="container">
-          <div class="header clearfix">
-              <nav>
-                  <ul class="nav nav-pills pull-right">
-                      <li ui-sref-active="active" ui-sref="home" role="presentation"><a href="#">Home</a></li>
-                      <li ui-sref-active="active" ui-sref="categories" role="presentation"><a href="#">Categories</a></li>
-                  </ul>
-              </nav>
-              <h3>Restaurant Menu App</h3>
-          </div>
-          <ui-view></ui-view>
-      </div>
-      <script src="lib/angular.min.js"></script>
-      <script src="lib/angular-ui-router.min.js"></script>
+    <style>
+    .jumbotron .btn { margin: 5px; }
+    </style>
+</head>
 
-      <script src="Modules/menuapp.module.js"></script>
-      <script src="Modules/data.module.js"></script>
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li ui-sref-active="active" ui-sref="home" role="presentation"><a href="#">Home</a></li>
+                    <li ui-sref-active="active" ui-sref="categories" role="presentation"><a href="#">Categories</a></li>
+                </ul>
+            </nav>
+            <h3>Restaurant Menu App</h3>
+        </div>
+        <ui-view></ui-view>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="Modules/menuapp.module.js"></script>
+    <script src="Modules/data.module.js"></script>
+    <script src="Controllers/categories.controller.js"></script>
+    <script src="Controllers/items.controller.js"></script>
+    <script src="Service/menudata.service.js"></script>
+    <script src="Components/categories.component.js"></script>
+    <script src="Components/items.component.js"></script>
+    <script src="routes.js"></script>
+    <script src="Templates/home.template.html"></script>
+    <script src="Templates/categories.component.html"></script>
+    <script src="Templates/categories.template.html"></script>
+    <script src="Templates/items.component.html"></script>
+    <script src="Templates/items.template.html"></script>
+</body>
 
-      <script src="Controllers/categories.controller.js"></script>
-      <script src="Controllers/items.controller.js"></script>
-
-      <script src="Service/menudata.service.js"></script>
-
-      <script src="Components/categories.component.js"></script>
-      <script src="Components/items.component.js"></script>
-
-      <script src="routes.js"></script>
-      
-      <script src="Templates/home.template.html"></script>
-      <script src="Templates/categories.component.html"></script>
-      <script src="Templates/categories.template.html"></script>
-      <script src="Templates/items.component.html"></script>
-      <script src="Templates/items.template.html"></script>
-  </body>
 </html>
